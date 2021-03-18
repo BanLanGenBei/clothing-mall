@@ -1,0 +1,828 @@
+body {
+    overflow-x: hidden;
+}
+
+#head {
+    width: 100%;
+    height: 150px;
+    background-color: #000000;
+  
+  
+    line-height: 150px;
+    position: fixed;
+    z-index: 2;
+  
+
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.return {
+    float:left;
+    position: absolute;
+    /* left: -350px; */
+    font-size: 15px;
+    position: relative;
+    font-family: '宋体';
+    color: rgb(230, 227, 211);
+
+}
+
+.title {
+    font-family: '微软雅黑';
+    color: white;
+    font-size: 45px;
+    margin-left: -200px;
+    position: absolute;
+    letter-spacing: 5px;
+}
+
+.chat {
+    float:right;
+    font-size: 15px;
+    font-family: '宋体';
+    top: 10px;
+    color: rgb(230, 227, 211);
+}
+
+.jlt1 {
+    background-image: url(../images/icon.png);
+    width: 20px;
+    height: 40px;
+    background-position: -115px -500px;
+    position: relative;
+    float:right;
+    top: 50px;
+    /* left: 650px; */
+}
+
+#main {
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    top: 160px;
+    padding:15px 15px 0;
+}
+
+.mainContent {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e7e7e7;
+    
+}
+
+.innerMain {
+     max-width: 1300px;
+     margin: 0 auto;
+     background-color: #e7e7e7;
+     overflow: hidden;
+}
+   
+
+.left {
+    width: 600px;
+    position: relative;
+    float: left;
+    margin-left: 0px;
+}
+
+.address {
+    display: block;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    top: 50px;
+    left: 60px;
+    font-size: 30px;
+    background-color: #eee;
+    padding-left: 20px;
+}
+.num1 {
+   width: 70px;height: 60px;
+    position: relative;
+    top: 135px;
+    left: -10px;
+}
+
+.ads {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.ad1 {
+    position: relative;
+    left: 25px;
+    top: 20px;
+}
+.num2 {
+    width: 70px;
+    height: 60px;
+     position: relative;
+     top: 135px;
+     left: -10px;
+ }
+ .payMethod {
+    display: block;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    top: 50px;
+    left: 60px;
+    font-size: 30px;
+    background-color: #eee;
+    padding-left: 20px;
+}
+
+.method {
+    margin-top: 40px;
+}
+
+.jlt4 {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon.png);
+    background-position: -326px -163px;
+    position: relative;
+    top: -58px;
+    left: 110px;
+}
+
+.m1 {
+    display: inline-block;
+    width: 500px;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    color: rgb(189, 185, 185);
+    font-style: italic;
+}
+
+.time span {
+    position: relative;
+    top: 60px;
+    left: 20px;
+}
+
+.adChoose {
+    width: 300px;
+    position: relative;
+    top: 20px;
+
+}
+
+.adChoose2 {
+    width: 300px;
+    position: relative;
+    top: -48px;
+    left: 400px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.adLB {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    top: 30px;
+    left: 0px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.adLB1 {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    top: 39px;
+    left: -150px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.adLB li,
+.adLB li {
+    margin-left: -40px;
+    padding-left: 10px;
+
+}
+.wk {
+    position:relative;
+    margin-left:0px;
+    margin-top:0px;
+}
+
+.hid {
+    position: relative;
+    left: -11px;
+    display: none;
+    z-index: 1;
+}
+
+.hid1 {
+    position: relative;
+    left: -11px;
+    display: none;
+    z-index: 1;
+}
+
+.hid li {
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.hidLi1 {
+    width: 200px;
+    position: relative;
+    left: -70px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.hidLi:hover,
+.hidLi1:hover {
+    background-color: #ccc;
+}
+
+.jlt3 {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon.png);
+    background-position: -80px -400px;
+    position: relative;
+    top: 85px;
+    left: 180px;
+    z-index: 5;
+}
+
+.jlt31 {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon.png);
+    background-position: -80px -400px;
+    position: relative;
+    top: -8px;
+    left: 30px;
+    z-index: 1;
+}
+
+.PScontent {
+    position: relative;
+    top: -20px;
+    color: rgb(189, 185, 185);
+    font-style: italic;
+}
+
+.payMoney {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    position: relative;
+    left: -30px;
+    top:60px;
+    outline: none;
+}
+.btnOK{
+    width: 120px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    position: relative;
+    top:80px;
+    left:-150px;
+    outline: none;
+}
+
+.right {
+    width: 480px;
+    float: left;
+    position: relative;
+    top: 50px;
+    left: 150px;
+    background-color: white;
+}
+
+.topRight {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.jlt5 {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon.png);
+    background-position: -290px -40px;
+    position: relative;
+    top: 25px;
+    left: -30px;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+table {
+    margin-left: 20px;
+}
+
+.num {
+    position: relative;
+    top: -60px;
+    left: 5px;
+}
+
+.price {
+    position: relative;
+    top: 65px;
+    left: -20px;
+}
+
+.detail {
+    margin-left: 10px;
+    
+}
+
+.detail1,
+.detail2 {
+    margin-bottom: 10px;
+}
+
+.detail2 {
+    color: rgb(197, 192, 192);
+}
+
+.detail3 {
+    margin-top: 40px;
+}
+
+.detail4 {
+    margin-top: 10px;
+    color: rgb(197, 192, 192);
+}
+
+.detail5 {
+    margin-top: 30px;
+    color: rgb(197, 192, 192);
+    margin-bottom: 10px;
+}
+
+table {
+    width: 450px;
+    height: 200px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.tip {
+    position: relative;
+    left: 60px;
+    top: 20px;
+}
+
+.free {
+    position: relative;
+    left: 350px;
+    top: 20px;
+}
+
+.all {
+    position: relative;
+    left: 45px;
+    top: 50px;
+}
+.m{
+    position: relative;
+    top:78px;
+    left:300px;
+    font-size: 20px;
+}
+
+.allMoney {
+    position: relative;
+    left: 340px;
+    top: 50px;
+    font-size: 20px;
+}
+
+.subm {
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+#tjOrder{
+    margin-left: 20px;
+}
+.tjOrder{
+    margin-left: 20px;
+}
+
+.subOrder {
+    width: 350px;
+    height: 50px;
+    background-color: #c7bfab;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    position: relative;
+    left: 20px;
+    top: 30px;
+    border: none;
+}
+.shuoming{
+    margin-top: 20px;
+}
+
+.titSM {
+    margin-left: 20px;
+    color:rgb(163, 163, 163);
+}
+
+.contentSM {
+    display: block;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color:rgb(163, 163, 163);
+    font-style: italic;
+}
+.PM{
+    display: none;
+}
+
+.PM {
+    width: 600px;
+    /* height: 300px; */
+    background-color: white;
+    margin-top: 70px;
+}
+
+.PM-1 {
+    position: relative;
+    top: 60px;
+    left: 70px;
+}
+
+.PM-2 {
+    position: relative;
+    top: 100px;
+    left: -32px;
+}
+
+ul {
+    list-style: none;
+}
+
+.PMUL li {
+    display: inline-block;
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+.PMUL2 {
+    position: relative;
+    left: -50px;
+    border:1px solid red;
+}
+
+.PMUL2 li {
+    display: inline-block;
+    width: 50px;
+
+}
+
+#eTicket {
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+
+.jlt7 {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/icon.png);
+    background-position: -372px -40px;
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+
+.jlt8 {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -415px -35px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+.jlt9 {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -167px -329px;
+    position: relative;
+    top: 35px;
+    left: 20px;
+}
+
+.ZFB {
+    position: relative;
+    margin-top: -300px;
+    margin-left: 30px;
+}
+
+.WX {
+    position: relative;
+    margin-top: -300px;
+    margin-left: 30px;
+}
+
+.YL {
+
+    margin-left: 30px;
+}
+
+.help {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.contentFree {
+    position: relative;
+    top: 40px;
+    left: 200px;
+}
+
+.sub {
+    position: relative;
+    margin-left: 300px;
+}
+
+.GW {
+    position: relative;
+    margin-left: 20px;
+}
+
+.jlt10 {
+    width: 30px;
+    height: 30px;
+    float:left;
+    background-image: url(../images/icon.png);
+    background-position: -370px 0px;
+    position: relative;
+    top: 25px;
+    left: -5px;
+}
+.add1,.add2,.add3,.add4,.return,.chat{
+    cursor: pointer;
+}
+
+.add1{
+    position: relative;
+    left: 300px;
+}
+.add2{
+    position: relative;
+    left: 310px;
+}
+.add3{
+    position: relative;
+    left: 280px;
+    top:-80px;
+}
+.add4{
+    position: relative;
+    left: 50px;
+    top:-35px;
+}
+
+.jlt11 {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -416px 0px;
+    position: relative;
+    float:left;
+    top: 25px;
+    left: 0px;
+}
+
+.phone {
+    position: relative;
+    top: -10px;
+    left: 18px;
+}
+
+.ZF {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.contentZF {
+    position: relative;
+    top: 10px;
+}
+
+.jlt71 {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/icon.png);
+    background-position: -372px -40px;
+    position: relative;
+    top: 29px;
+    left: 10px;
+}
+
+.jlt81 {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -415px -40px;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.jlt91 {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -167px -329px;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.jlt101 {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -336px -39px;
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+.jlt111 {
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/icon.png);
+    background-position: -102px -192px;
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+.ZFB1 {
+    margin-left: 30px;
+}
+
+.WX1 {
+    margin-left: 30px;
+}
+
+.YL1 {
+
+    margin-left: 30px;
+}
+
+.present {
+    margin-left: 30px;
+    padding-top: 10px;
+    line-height: 30px;
+}
+
+
+
+.PS {
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+.sub5 {
+    position: relative;
+    top: -20px;
+    left: 25px;
+}
+
+.jlt12 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon.png);
+    background-position: -500px -40px;
+    position: relative;
+    top: 10px;
+    left: 0px;
+}
+
+.SF {
+    position: relative;
+    left: 30px;
+}
+
+.jlt13 {
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    background-image: url(../images/icon.png);
+    background-position: -750px 0px;
+    position: relative;
+    top: 5px;
+    left: 100px;
+}
+#eTicket{
+    display: inline-block;
+    position: relative;
+    margin-bottom:10px;
+}
+
+.toblock {
+    display: block;
+}
+.add11{
+    display:none;
+}
+.shengsuo{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.shengsuo li{
+    width: 300px;
+    height: 50px;
+    line-height: 60px;
+    margin-left: 50px;
+    
+}
+.inner1{
+    position: relative;
+    left: -50px;
+}
+
+
+.inner1,.inner2,.inner3,.inner4{
+    display: none;
+}
+
+.sss{
+    width: 480px;
+    margin: 0 auto;
+    margin-left: -60px;
+    border-top:1px solid #ccc;
+}
+.ss1 img{
+    position: relative;
+    left:250px;
+}
+.ss2 img,.ss3 img,.ss4 img{
+    position: relative;
+    left:258px;
+}
+.donghua{
+    height: 800px;
+}
+
+@font-face {
+    font-family: FuturaLT-Light;
+    src: url(../fonts/futura-lt-light.woff2),
+        url(../fonts/futura-lt-light.woff2) format("svg"),
+        url(../fonts/futura-lt-light.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+

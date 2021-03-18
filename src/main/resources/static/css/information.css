@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "FuturaLT-Light";
+    src: url(../fonts/futura-lt-light.woff2),
+     url(../fonts/futura-lt-light.woff2) format("svg"),
+     url(../fonts/futura-lt-light.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap
+}
+@font-face {
+    font-family: "FuturaLT-Book";
+    src: url(../fonts/futura-lt-book.woff2),
+     url(../fonts/futura-lt-book.woff2) format("svg"),
+     url(../fonts/futura-lt-book.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap
+}
+@font-face {
+    font-family: "FuturaLT-Medium";
+    src: url(../fonts/futura-lt-medium.woff2),
+     url(../fonts/futura-lt-medium.woff2) format("svg"),
+     url(../fonts/futura-lt-medium.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap
+}
+@font-face {
+    font-family: "FuturaLT-Medium-bold";
+    src: url(../fonts/futura-lt-medium-bold.woff2),
+     url(../fonts/futura-lt-medium-bold.woff2) format("svg"),
+     url(../fonts/futura-lt-medium-bold.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap
+}
+@font-face {
+    font-family: "times-new-roman-italic";
+    src: url(../fonts/times-new-roman-italic.woff2),
+     url(../fonts/times-new-roman-italic.woff2) format("svg"),
+     url(../fonts/times-new-roman-italic.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap
+}
+@media screen and (max-width:768px) {
+    #header {
+    height: 210px;
+    width: 100%;
+}
+    #d1 {
+        width: 100%;
+        height: 200px;
+        background-image: url(../images/bj1.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        color: #fff;
+        font-size: 30px;
+        font-family:'FuturaLT-Light','GucciChinese';
+        font-weight: lighter;
+        line-height: 200px;
+        text-align: center;
+        cursor: pointer; 
+    } 
+    
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    #header {
+    height: 260px;
+    width: 100%;
+}
+    #d1 {
+        width: 100%;
+        height: 250px;
+        background-image: url(../images/bj1.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: 0 -50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        color: #fff;
+        font-size: 30px;
+        font-family: 'FuturaLT-Light','GucciChinese';
+    font-weight: lighter;
+    line-height: 250px;
+    text-align: center;
+    cursor: pointer; 
+    }
+}
+@media screen and (min-width:992px){
+      #header {
+    height: 310px;
+    width: 100%;
+}
+    #d1 {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/bj1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'FuturaLT-Light','GucciChinese';
+    font-weight: lighter;
+    line-height: 300px; 
+    cursor: pointer; 
+}
+
+}
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+#p1 {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: KaiTi;
+    font-weight: bolder;
+}
+
+#d3 {
+    text-align: center;
+    padding: 50px 0;
+}
+#img1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.p2 {
+    font-family: 'times-new-roman-italic','PingFangSC-Regular,Hiragino Sans GB,\\5FAE\8F6F\96C5\9ED1,Microsoft YaHei,sans-serif';
+    font-style: italic;
+    font-size: 14px;
+}
+.d4 {
+    height: 200px;
+    border: 5px #ffffff solid;
+    border-left: transparent;
+    border-right: transparent;
+    line-height: 80px;
+    text-align: center;
+}
+.sp1 {
+    font-size: 20px;
+    font-family: 'FuturaLT-Light','GucciChinese';
+    cursor: pointer;
+}
+.sp1:hover,#p1:hover{
+    color: #ccc;
+}

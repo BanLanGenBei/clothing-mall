@@ -1,0 +1,5 @@
+#\u65E5\u671F\u683C\u5F0F
+private static final DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyyMMdd");
+private static final DateTimeFormatter fmtH = DateTimeFormatter.ofPattern("yyyyMMddHH");
+private static final DateTimeFormatter fmtHm = DateTimeFormatter.ofPattern("yyyyMMddHHmm");
+private static final DateTimeFormatter fmtHms = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");

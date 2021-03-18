@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script th:src="@{/js/car.js}"></script>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <script th:src="@{/css/bootstrap.css}"></script>
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/car.css}">
+    <script th:src="@{/js/nav.js}"></script>
+    <title>购物车</title>
+</head>
+
+<body>
+    <header class="spice-header">
+        <div class="spice-container header-transparent">
+            <nav class="spice-navbar">
+                <div class="spice-navbar-logo">
+                    <h1>
+                        <a href="http://localhost:3000/index">
+                            <img alt="GUCCI" th:src="@{/images/clothes.png}">
+                        </a>
+                    </h1>
+                </div>
+                <button class="spice-btn spice-navbar-btn-toggle e-navbar-btn-toggle">
+                    <i class="svg-iconfont icon-svg-burger"></i>
+                    <span class="e-sales-cookie-username"></span>
+                </button>
+                <div class="spice-navbar-menu e-navbar-menu">
+                    <div class="spice-navbar-menu-return e-navbar-menu-return spice-none spice-block-sm">
+                        <a></a>
+                    </div>
+                    <div class="spice-navbar-menu-container">
+                        <div class="spice-navbar-scroller">
+                            <div class="spice-navbar-scroller-container">
+                                <ul id="navul" class="spice-nav spice-nav-pills">
+                                    <li data-id="2" class="spice-nav-menu "><a href="http://localhost:3000/index">主页<i class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="4" class="spice-nav-menu"><a href="javascript:void(0);">上装<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="5" class="spice-nav-menu"><a href="javascript:void(0);">下装<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="361" class="spice-nav-menu"><a href="javascript:void(0);">连衣裙<i
+                                                class="spice-icon"></i></a></li>
+                                    <li data-id="7" class="spice-nav-menu"><a href="javascript:void(0);">衬衫<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="6" class="spice-nav-menu"><a href="javascript:void(0);">T恤<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="532" class="spice-nav-menu"><a href="javascript:void(0);">运动装<i
+                                                class="spice-icon"></i></a></li>
+                                    <li data-id="180" class="spice-nav-menu"><a href="javascript:void(0);">半裙<i
+                                                class="spice-icon"></i></a></li>
+                                    <li data-id="8" class="spice-nav-menu"><a href="javascript:void(0);">卫衣<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                </ul>
+                                <ul  class="spice-nav spice-nav-pills spice-nav-other spice-nav-other-login">
+                                    <li  class="spice-nav-btn-login e-header-login ">
+                                        <a class="login-text" href="http://localhost:3000/login">登录</a>
+                                        <a class="svg-iconfont icon-svg-account login-icon" href=""></a>
+                                        <div class="spice-sub-menu">
+                                            <div class="spice-dropdown-menu-content">
+                                                <h3>
+                                                    拥有古驰账户您将获得以下权利：</h3>
+                                                <ul>
+                                                    <li>保存您的心愿清单</li>
+                                                    <li>个性化您的推荐内容</li>
+                                                    <li>订单寄送追踪及退换货管理</li>
+                                                </ul>
+                                                <div class="spice-submenu-btn">
+                                                    <a href="http://localhost:3000/login">登录</a> <a href="javascript:;"
+                                                        class="spice-btn spice-btn-black spice-submenu-btn-register">注册</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li id="myprofile" class="spice-nav-btn-login-after e-header-login-after spice-none">
+                                        <a href="http://localhost:3000/information"><i
+                                                class="svg-iconfont icon-svg-account login-icon"></i><span
+                                                class="login-text">我的账户</span></a>
+                                                <a href="http://localhost:3000/information"><i
+                                                    class="svg-iconfont icon-svg-account login-icon"></i><span
+                                                    class="login-text" id="exit-text">[退出]</span></a>
+                                        <div class="spice-sub-menu">
+                                            <div class="spice-dropdown-menu-content">
+                                                <div class="spice-user-center-slot">
+                                                    <ul>
+                                                        <li><a href="/zh/orderHistory">我的订单</a></li>
+                                                        <li><a href="/zh/wish/list">心愿单</a></li>
+                                                        <li><a href="/zh/member/profile">账户设置</a></li>
+                                                        <li><a href="/zh/myaccount/address">我的地址</a></li>
+                                                        <li><a href="/zh/member/loginOut">退出登录</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div></div>
+                                    </li>
+                                    <li class="spice-nav-wish-list e-header-wish-list"><a href="http://localhost:3000/collect"
+                                            class="spice-nav-savedItems"> <i
+                                                class="svg-iconfont icon-svg-saved-items"></i> <span>心愿单</span> <span
+                                                class="wish-savedItems-num"></span>
+                                        </a>
+                                        <div class="spice-sub-menu"></div>
+                                    </li>
+                                    <li class="spice-nav-wish-list e-header-wish-list"><a href="http://localhost:3000/car"
+                                            class="spice-nav-savedItems"> <i
+                                                class="svg-iconfont icon-svg-saved-items"></i> <span>购物车</span> <span
+                                                class="wish-savedItems-num"></span>
+                                        </a>
+                                        <div class="spice-sub-menu"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spice-navbar-menu-other">
+                    <div class="spice-header-search e-header-search">
+                        <a class="icon-svg-search svg-iconfont"></a>
+                        <a id="opensearch" class="icon-header-search svg-iconfont search-icon e-search-open"></a>
+                        <a id="closesearch" class="icon-header-close svg-iconfont search-icon e-search-close"
+                            style="display: none;"></a>
+                        <!-- 搜索 -->
+                        <div class="spice-sub-menu">
+                            <div class="spice-search-menu">
+                                <div class="spice-seach-box">
+                                    <input type="hidden" id="keywordValue" value="秋冬新款手袋">
+                                    <div class="spice-seach-box-group spice-no-error-style-input">
+                                        <input id="keyword" type="text" name="keyword" autocomplete="off"
+                                            class="spice-seach-box-input spice-input"
+                                            spice-placeholder='{"original":"秋冬新款手袋","focus":"秋冬新款手袋"}'
+                                            placeholder="秋冬新款手袋" data-errormsg="请输入关键字" />
+                                        <span class="spice-msg-block"><i class="icon-svg-error svg-iconfont"></i></span>
+                                    </div>
+                                    <a class="tosearch"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div id="bg">
+        <img th:src="@{/images/bg.jpg}" alt="">
+    </div>
+    <div id="title">
+        <div class="title1">CLOTHES</div>
+        <div class="title2">购物袋</div>
+    </div>
+
+        <div id="main">
+            <div class="mainContent">
+                <div id="car">
+                    <input type="checkbox" class="checkall">
+                        <span class="ck">全选</span>
+                        <hr style="background-color: #ccc;height: 1px;border:none;margin-top: 20px;">
+                    <div class="left">
+                    </div>
+                    <div class="rightContent">
+                        <div class="right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    <div id="footer">
+        <div id="session">
+            <ul>
+                <li><img th:src="@{/images/quality.png}" alt=""><span>&nbsp; 品质保证</span> </li>
+                <li><img th:src="@{/images/qos.png}" alt="">&nbsp; <span> 售后保障</span> </li>
+                <li><img th:src="@{/images/nature.png}" alt="">&nbsp;<span> 海外直邮</span> </li>
+            </ul>
+        </div>
+        <hr>
+        <p>
+            Copyright © 2020-2020 clothes.com，All Rights Reserved
+            使用本网站即表示接受 克罗斯用户协议。版权所有
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的账户</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.css}">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/index2.css}">
+    <link rel="stylesheet" th:href="@{/css/profile.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <script th:src="@{/js/profile.js}"></script>
+    <script th:src="@{js/nav.js}"></script>
+</head>
+
+<body>
+    <header class="spice-header">
+        <div class="spice-container header-transparent">
+            <nav class="spice-navbar">
+                <div class="spice-navbar-logo">
+                    <h1>
+                        <a href="http://localhost:3000/clothing-mall/pageJump/index">
+                            <img alt="GUCCI" th:src="@{/images/clothes.png}">
+                        </a>
+                    </h1>
+                </div>
+                <button class="spice-btn spice-navbar-btn-toggle e-navbar-btn-toggle">
+                    <i class="svg-iconfont icon-svg-burger"></i>
+                    <span class="e-sales-cookie-username"></span>
+                </button>
+                <div class="spice-navbar-menu e-navbar-menu">
+                    <div class="spice-navbar-menu-return e-navbar-menu-return spice-none spice-block-sm">
+                        <a></a>
+                    </div>
+                    <div class="spice-navbar-menu-container">
+                        <div class="spice-navbar-scroller">
+                            <div class="spice-navbar-scroller-container">
+                                <ul id="navul" class="spice-nav spice-nav-pills">
+                                    <li data-id="2" class="spice-nav-menu "><a href="http://localhost:3000/index">主页<i class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="4" class="spice-nav-menu"><a href="javascript:void(0);">上装<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="5" class="spice-nav-menu"><a href="javascript:void(0);">下装<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="361" class="spice-nav-menu"><a href="javascript:void(0);">连衣裙<i
+                                                class="spice-icon"></i></a></li>
+                                    <li data-id="7" class="spice-nav-menu"><a href="javascript:void(0);">衬衫<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="6" class="spice-nav-menu"><a href="javascript:void(0);">T恤<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                    <li data-id="532" class="spice-nav-menu"><a href="javascript:void(0);">运动装<i
+                                                class="spice-icon"></i></a></li>
+                                    <li data-id="180" class="spice-nav-menu"><a href="javascript:void(0);">半裙<i
+                                                class="spice-icon"></i></a></li>
+                                    <li data-id="8" class="spice-nav-menu"><a href="javascript:void(0);">卫衣<i
+                                                class="spice-icon"></i></a>
+                                    </li>
+                                </ul>
+                                <ul  class="spice-nav spice-nav-pills spice-nav-other spice-nav-other-login">
+                                    <li  class="spice-nav-btn-login e-header-login ">
+                                        <a class="login-text" href="http://localhost:3000/login">登录</a>
+                                        <a class="svg-iconfont icon-svg-account login-icon" href=""></a>
+                                        <div class="spice-sub-menu">
+                                            <div class="spice-dropdown-menu-content">
+                                                <h3>
+                                                    拥有古驰账户您将获得以下权利：</h3>
+                                                <ul>
+                                                    <li>保存您的心愿清单</li>
+                                                    <li>个性化您的推荐内容</li>
+                                                    <li>订单寄送追踪及退换货管理</li>
+                                                </ul>
+                                                <div class="spice-submenu-btn">
+                                                    <a href="http://localhost:3000/login">登录</a> <a href="javascript:;"
+                                                        class="spice-btn spice-btn-black spice-submenu-btn-register">注册</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li id="myprofile" class="spice-nav-btn-login-after e-header-login-after spice-none">
+                                        <a href="http://localhost:3000/information"><i
+                                                class="svg-iconfont icon-svg-account login-icon"></i><span
+                                                class="login-text">我的账户</span></a>
+                                                <a href="http://localhost:3000/information"><i
+                                                    class="svg-iconfont icon-svg-account login-icon"></i><span
+                                                    class="login-text" id="exit-text">[退出]</span></a>
+                                        <div class="spice-sub-menu">
+                                            <div class="spice-dropdown-menu-content">
+                                                <div class="spice-user-center-slot">
+                                                    <ul>
+                                                        <li><a href="/zh/orderHistory">我的订单</a></li>
+                                                        <li><a href="/zh/wish/list">心愿单</a></li>
+                                                        <li><a href="/zh/member/profile">账户设置</a></li>
+                                                        <li><a href="/zh/myaccount/address">我的地址</a></li>
+                                                        <li><a href="/zh/member/loginOut">退出登录</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div></div>
+                                    </li>
+                                    <li class="spice-nav-wish-list e-header-wish-list"><a href="http://localhost:3000/collect"
+                                            class="spice-nav-savedItems"> <i
+                                                class="svg-iconfont icon-svg-saved-items"></i> <span>心愿单</span> <span
+                                                class="wish-savedItems-num"></span>
+                                        </a>
+                                        <div class="spice-sub-menu"></div>
+                                    </li>
+                                    <li class="spice-nav-wish-list e-header-wish-list"><a href="http://localhost:3000/car"
+                                            class="spice-nav-savedItems"> <i
+                                                class="svg-iconfont icon-svg-saved-items"></i> <span>购物车</span> <span
+                                                class="wish-savedItems-num"></span>
+                                        </a>
+                                        <div class="spice-sub-menu"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spice-navbar-menu-other">
+                    <div class="spice-header-search e-header-search">
+                        <a class="icon-svg-search svg-iconfont"></a>
+                        <a id="opensearch" class="icon-header-search svg-iconfont search-icon e-search-open"></a>
+                        <a id="closesearch" class="icon-header-close svg-iconfont search-icon e-search-close"
+                            style="display: none;"></a>
+                        <!-- 搜索 -->
+                        <div class="spice-sub-menu">
+                            <div class="spice-search-menu">
+                                <div class="spice-seach-box">
+                                    <input type="hidden" id="keywordValue" value="秋冬新款手袋">
+                                    <div class="spice-seach-box-group spice-no-error-style-input">
+                                        <input id="keyword" type="text" name="keyword" autocomplete="off"
+                                            class="spice-seach-box-input spice-input"
+                                            spice-placeholder='{"original":"秋冬新款手袋","focus":"秋冬新款手袋"}'
+                                            placeholder="秋冬新款手袋" data-errormsg="请输入关键字" />
+                                        <span class="spice-msg-block"><i class="icon-svg-error svg-iconfont"></i></span>
+                                    </div>
+                                    <a class="tosearch"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">更改号码</h4>
+                </div>
+                <div class="modal-body">
+                    <p>输入更改的手机号码</p>
+                    <input type="text" value="" id="modpt"></div><span id="nubPwd"></span>
+                <div class="modal-footer">
+                    <button id="domywork1" data-dismiss="modal">确认</button>
+                    <button data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> 更改密码</h4>
+                </div>
+                <div class="modal-body">
+                    <p>输入原密码</p>
+                    <input type="text">
+                    <p>输入新密码</p>
+                    <input type="text"></div>
+                <div class="modal-footer">
+                    <button id="domywork2" data-dismiss="modal">确认</button>
+                    <button data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">隐私协议</h4>
+            </div>
+            <div class="modal-body">
+                &nbsp;&nbsp;本产品尊重并保护所有使用网络服务用户的个人隐私权。为了给您提供更
+
+                准确、更有个性化的服务，会按照本隐私权政策的规定使用和披露您的个
+                
+                人信息。但将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另
+                
+                有规定外，在未征得您事先许可的情况下，本产品不会将这些信息对外披
+                
+                露或向第三方提供。本产品会不时更新本隐私权政策。您在同意本产品网
+                
+                络服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私
+                
+                权政策属于本产品网络服务使用协议不可分割的一部分。<br>
+                
+                1.适用范围<br>
+                
+                a)在您注册本产品帐号时，
+                
+                您根据本产品要求提供的个人注册信息（商家应法律法规要求需公示的企
+                
+                业名称及相关工商注册信息除外）；<br>
+                
+                b)在您使用本产品网络服务，或访问本产品平台网页时，本产品自动接收
+                
+                并记录的您的浏览器和iphone或者ipad上的信息，包括但不限于您的IP
+                
+                地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及
+                
+                您需求的网页记录等数据；<br>
+                
+                c)本产品通过合法途径从商业伙伴处取得的用户个人数据。您了解并同
+                
+                意，以下信息不适用本隐私权政策：<br>
+                
+                d)您在使用本产品平台提供的搜索服务时输入的关键字信息；隐私政策<br>
+                
+                2.信息使用<br>
+                
+                a)本产品不会向任何无关第三方提供、出售、出租、分享或交易您的个人
+                
+                信息，除非事先得到您的许可，或该第三方和本产品（含本产品关联公司）
+                
+                单独或共同为您提供服务，且在该服务结束后，其将被禁止访问包括其以
+                
+                前能够访问的所有这些资料。<br>
+                
+                b)本产品亦不允许任何第三方以任何手段收集、编辑、出售或者无偿传播
+                
+                您的个人信息。任何本产品平台用户如从事上述活动，一经发现，本产品
+                
+                有权立即终止与该用户的服务协议。<br>
+                
+                c)为服务用户的目的，本产品可能通过使用您的个人信息，向您提供您感
+                
+                兴趣的信息，包括但不限于向您发出产品和服务信息，或者与本产品合作
+                
+                伙伴共享信息以便他们向您发送有关其产品和服务的信息（后者需要您的
+                
+                事先同意）。<br>
+                
+                3.信息披露<br>
+                
+                在如下情况下，本产品将依据您的个人意愿或法律的规定全部或部分的披
+                
+                露您的个人信息：<br>
+                
+                a)经您事先同意，向第三方披露；<br>
+                
+                b)为提供您所要求的产品和服务，而必须和第三方分享您的个人信息；<br>
+                
+                c)根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、
+                
+                司法机构披露；<br>
+                
+                d)如您出现违反中国有关法律、法规或者本产品服务协议或相关规则的情
+                
+                况，需要向第三方披露；<br>
+                
+                e)如您是适格的知识产权投诉人并已提起投诉，应被投诉人要求，向被投
+                
+                诉人披露，以便双方处理可能的权利纠纷；<br>
+                
+                f)在本产品平台上创建的某一交易中，如交易任何一方履行或部分履行了
+                
+                交易义务并提出信息披露请求的，本产品有权决定向该用户提供其交易对
+                
+                方的联络方式等必要信息，以促成交易的完成或纠纷的解决。<br>
+                
+                g)其它本产品根据法律、法规或者网站政策认为合适的披露。<br>
+                
+                4.信息存储和交换<br>
+                
+                本产品收集的有关您的信息和资料将保存在本产品及（或）其关联公司的
+                
+                服务器上，这些信息和资料可能传送至您所在国家、地区或本产品收集信
+                
+                息和资料所在地的境外并在境外被访问、存储和展示。<br>
+                祝您购物愉快！！！
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">我已知道</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <div id="header">
+        <div id="d1">我的账户</div>
+    </div>
+    <main>
+        <form id="f1">
+            <div id="#d2">
+            <div class="sp1">您的信息</div><br>
+            
+                <div class="d4">
+                    <p>称呼</p>&nbsp;&nbsp;<select name="" id="selC">
+                        <option value="请选择">请选择</option>
+                        <option value="先生">先生</option>
+                        <option value="女士">女士</option>
+                        <option value="小姐">小姐</option>
+                        <option value="暂不透露">暂不透露</option>
+                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>姓</p>&nbsp;&nbsp;<input type="text" name="" id="" placeholder="输入姓氏">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>名</p>&nbsp;&nbsp;<input type="text" name="" id="" placeholder="输入名字">
+                </div><br>
+                <div class="d4">
+                    <p>国家/省份</p>&nbsp;&nbsp;<select name="" id="selectG">
+                        <option value="请选择国家">请选择国家</option>
+                        <option value="中国大陆">中国大陆</option>
+                    </select>&nbsp;&nbsp;
+                    <select id="selectS">
+                        <option value="请选择省份">请选择省份</option>
+                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>生日</p>&nbsp;&nbsp;
+                    <select name="" id="selyear">
+                        <option>请选择年份</option>
+                    </select>&nbsp;&nbsp;<select name="" id="selMonth">
+                        <option>请选择月份</option>
+                    </select>&nbsp;&nbsp;<select name="" id="selDay">
+                        <option>请选择日期</option>
+                    </select>
+                </div><br>
+                <div class="d4">
+                    <p>联系电话</p>&nbsp;&nbsp;<select name="" id="">
+                        <option value="+86 中国大陆">+86 中国大陆</option>
+                    </select>&nbsp;&nbsp;<input type="text" name="" id="">
+                </div><br><br>
+            </div>
+            <div id="d3">
+            <span class="sp1">账户详情</span><br><br>
+            
+                <p>手机号码</p>
+                <p class="p1">这是你的clothes官网登陆手机号码</p><input type="text" name="" id="modp" readonly="readonly" value="15586840154"><span
+                    class="sp2" id="modm" >&nbsp;&nbsp;&nbsp;&nbsp;修改手机号码</span> | <span class="sp2" id="modpass">修改密码</span><br><br>
+                <p>邮箱</p>
+                <p class="p1">输入您的邮箱，即可用邮箱进行登录和找回密码</p><input type="text" name="" id="">
+                <br><br>
+                <input type="submit" value="保存修改">
+                <input type="button" value="取消修改" id="btn2"><br><br>
+                <p><strong>*</strong>点击以上按钮代表您接受我们的<strong class="sp2" id="sp3">隐私政策</strong></p>
+            </div>
+        </form>
+    </main>
+    <div id="footer">
+        <div id="session">
+            <ul>
+                <li ><img th:src="@{/images/quality.png}" alt=""><span>&nbsp; 品质保证</span> </li>
+                <li><img th:src="@{/images/qos.png}" alt="">&nbsp; <span> 售后保障</span> </li>
+                <li><img th:src="@{/images/nature.png}" alt="">&nbsp;<span> 海外直邮</span> </li>
+            </ul>
+        </div>
+        <hr>
+        <p>
+            Copyright © 2020-2020 clothes.com，All Rights Reserved 
+             使用本网站即表示接受 克罗斯用户协议。版权所有 
+        </p>
+    </div>
+</body>
+
+</html>

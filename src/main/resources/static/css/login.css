@@ -1,0 +1,86 @@
+.spice-header .spice-container.header-transparent {
+   background-color: #1b1b1b;
+}
+        body{
+            background-color: rgb(226, 226, 226);
+        }
+        #p1{
+            font-size: 35px;
+            font-family: Microsoft YaHei;
+            text-align: center;
+            margin-top: 200px;
+        }
+        #login{
+            margin: 0 auto;
+
+            min-height: 426px;
+            width: 770px;
+            margin-bottom: 160px;
+        }
+        #left_phone,#left_pwd{
+            border-right: 1px solid #fff;
+            padding: 44px 40px 80px;
+            margin: 0 auto;
+        }
+        #right{
+            padding: 44px 40px 80px;
+            }
+        #user,#password,#userPhone,#pwdPhone{
+            width: 300px;
+            height: 37px;
+            padding: 12px 14px 11px;
+            border-radius: 0;
+            border: 1px solid transparent;
+            outline: 0 solid transparent;
+            
+        }
+        #pwdPhone{
+            width: 200px;
+            display: inline-block;
+        }
+        #userName,#userPwd,#userCode{
+            width: 300px;
+            height: 30px;
+            border-radius: 0px;
+        }
+        #log{
+            width: 300px;
+            height: 37px;
+            background-color: #000;
+            border-radius: 0px;
+        }
+        #p2{font-size: 24px;}
+        #p3{font-size: 18px;}
+        #p4{font-size: 14px;}
+        #register{
+            width: 230px;
+            height: 37px;
+            border: 2px solid #000;
+        }
+        #sub{
+            /* width: 80px; */
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+            max-width: 240px;
+            width: 100%;
+            text-align: center;
+        }
+        #myModalLabel{
+            text-align: center;
+        }
+        #p5{
+            text-align: left;
+            float: left;
+        }
+
+
+
+
+
+
+
+
+
+
+        
