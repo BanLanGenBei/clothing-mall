@@ -13,6 +13,7 @@ public class RegularExpressionConstant {
 
     //邮件发送者
     public static final String mailFromUser="18762084218@163.com";
+
     //发送的主题
     public static final String mailSubject="服装商城";
 }
