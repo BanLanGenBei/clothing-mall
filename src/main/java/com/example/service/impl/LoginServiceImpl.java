@@ -55,7 +55,7 @@ public class LoginServiceImpl implements LoginService {
         //验证码为空
         if(StringUtils.isBlank(mailVerification)){
             throw new CommonException(ExceptionEnum.VERIFICATION_CODE_IS_EMPTY);
-        }else if(!mailVerification.equals(stringRedisTemplate.opsForValue().get(email))){
+        }else if(!mailVerification.equals(stringRedisTemplate.opsForValue().get(email+".register"))){
             //验证码错误
             throw new CommonException(ExceptionEnum.VERIFICATION_CODE_IS_ERROR);
         }
@@ -214,8 +214,6 @@ public class LoginServiceImpl implements LoginService {
         formatter.applyPattern(template.getString("loginAccount"));
         String[] args = {randomCode};
         String content = formatter.format(args);
-//        String loginAccount = messageSource.getMessage("loginAccount", null, null);
-//        String format = messageFormat.format(loginAccount, randomCode);
         mailMessage.setText(content);
         mailSender.send(mailMessage);
         BaseResult.success();
