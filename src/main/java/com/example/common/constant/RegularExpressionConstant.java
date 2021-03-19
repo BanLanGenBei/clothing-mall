@@ -1,7 +1,7 @@
 package com.example.common.constant;
 
 /**
- * @Description:
+ * @Description: 正则表达式
  * @Author: chenchong
  * @Date: 2021/2/4 11:17
  */
