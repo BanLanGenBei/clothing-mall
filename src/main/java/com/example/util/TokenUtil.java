@@ -26,10 +26,10 @@ public class TokenUtil {
 
 
     /**
-     * 生成签名，30分钟过期
+     * 生成签名
      * @return
      */
-    public static String sign(Integer userId) {
+    public static String sign(String userId) {
         try {
             // 设置过期时间
             Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
@@ -87,7 +87,7 @@ public class TokenUtil {
     }
 
     public static void main(String[] args) {
-        String sign = sign(121);
+        String sign = sign("19");
         System.out.println(sign);
 
         String userId = getUserId(sign, "userId");

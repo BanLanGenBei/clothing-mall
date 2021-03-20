@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author ${author}
  * @since 2021-02-04
  */
-public interface IUserService extends IService<User> {
+public interface UserService extends IService<User> {
 
     /**
      * 根据邮箱查询用户记录
@@ -22,6 +22,10 @@ public interface IUserService extends IService<User> {
      * 新增用户信息
      */
     void insertUser(User user);
+    /**
+     * 根据用户的id查询用户
+     */
+    User getUserById(Integer userId);
 
 
 }

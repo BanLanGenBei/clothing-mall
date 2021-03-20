@@ -1,27 +1,11 @@
 package com.example.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.example.common.constant.RegularExpressionConstant;
-import com.example.common.exception.CommonException;
-import com.example.common.exception.ExceptionEnum;
-import com.example.common.reponse.BaseResult;
 import com.example.model.entity.User;
 import com.example.mapper.UserMapper;
-import com.example.service.IUserService;
+import com.example.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.util.RegularUtil;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.text.MessageFormat;
-import java.util.Random;
-import java.util.ResourceBundle;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -33,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  * @since 2021-02-04
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
     /**
      * 根据邮箱查询用户
      * @param email
@@ -51,6 +35,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public void insertUser(User user) {
         this.baseMapper.insert(user);
+    }
+
+    /**
+     * 根据用户的id获取用户
+     * @param userId
+     * @return
+     */
+    @Override
+    public User getUserById(Integer userId) {
+        User user = this.baseMapper.selectById(userId);
+        return user;
     }
 
 

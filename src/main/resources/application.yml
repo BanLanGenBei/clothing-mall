@@ -1,8 +1,11 @@
 server:
   port: 3000
   servlet:
-    context-path: /clothing-mall
+    context-path: /${spring.application.name}
+
 spring:
+  application:
+    name: clothing-mall
 # mysql数据库
   datasource:
     username: root

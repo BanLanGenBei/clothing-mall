@@ -4,6 +4,8 @@ import com.example.common.constant.RegularExpressionConstant;
 import com.example.common.exception.CommonException;
 import com.example.common.exception.ExceptionEnum;
 import com.example.common.reponse.BaseResult;
+import com.example.common.support.LocalStorageUtils;
+import com.example.common.support.StorageInfo;
 import com.example.model.entity.User;
 import com.example.service.LoginService;
 import com.example.util.RegularUtil;
@@ -106,7 +108,7 @@ public class LoginServiceImpl implements LoginService {
             throw new CommonException(ExceptionEnum.WRONG_PASSWORD);
         }
         //生成token
-        String sign = TokenUtil.sign(user.getId());
+        String sign = TokenUtil.sign(String.valueOf(user.getId()));
         return BaseResult.success(sign);
     }
 
@@ -145,6 +147,7 @@ public class LoginServiceImpl implements LoginService {
      * 发送邮箱验证码 - 为了注册
      */
     public void sendVerificationForRegister(String email){
+        StorageInfo storageInfo = LocalStorageUtils.getStorageInfo();
         //邮箱不为空
         if(StringUtils.isBlank(email) || StringUtils.isEmpty(email)){
             throw new CommonException(ExceptionEnum.PARAM_ERROR);
@@ -164,6 +167,7 @@ public class LoginServiceImpl implements LoginService {
         //将验证码放进redis
         stringRedisTemplate.opsForValue().set(email+".register",randomCode);
         stringRedisTemplate.expire(email+".register",5, TimeUnit.MINUTES);
+
         //发送邮件
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setSubject(RegularExpressionConstant.mailSubject);
