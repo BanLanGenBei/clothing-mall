@@ -106,7 +106,7 @@ public class LoginServiceImpl implements LoginService {
             throw new CommonException(ExceptionEnum.WRONG_PASSWORD);
         }
         //生成token
-        String sign = TokenUtil.sign(String.valueOf(user.getId()),null);
+        String sign = TokenUtil.sign(user.getId());
         return BaseResult.success(sign);
     }
 

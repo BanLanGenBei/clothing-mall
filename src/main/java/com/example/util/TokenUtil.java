@@ -29,7 +29,7 @@ public class TokenUtil {
      * 生成签名，30分钟过期
      * @return
      */
-    public static String sign(String userInfo, String other) {
+    public static String sign(Integer userId) {
         try {
             // 设置过期时间
             Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
@@ -42,8 +42,7 @@ public class TokenUtil {
             // 返回token字符串
             return JWT.create()
                     .withHeader(header)
-                    .withClaim("userInfo", userInfo)
-                    .withClaim("other", other)
+                    .withClaim("userId", userId)
                     .withExpiresAt(date)
                     .sign(algorithm);
         } catch (Exception e) {
@@ -75,7 +74,7 @@ public class TokenUtil {
      * @param **token**
      * @return
      */
-    public static String getUserName(String token,String info){
+    public static String getUserId(String token,String info){
         try {
 
             DecodedJWT jwt = JWT.decode(token);
@@ -85,6 +84,14 @@ public class TokenUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void main(String[] args) {
+        String sign = sign(121);
+        System.out.println(sign);
+
+        String userId = getUserId(sign, "userId");
+        System.out.println(userId);
     }
 
 }
